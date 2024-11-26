@@ -1,4 +1,4 @@
-// Global variables to keep track of olayers score.
+// Global variables to keep track of players score.
 
 let humanScore = 0;
 let computerScore = 0;
