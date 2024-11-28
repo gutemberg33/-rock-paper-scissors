@@ -1,15 +1,19 @@
-/* This is a javascript code for the rock, paper, scissors game. This game will be played entirely in the console.
-   It contains logic to get human and computer choices, plays a single round, increments the round winner’s score 
-   and logs a winner announcement. A function to play 5 rounds, keeps track of the scores and declares a winner at the end.
- */
+/*
+   Rock, Paper, Scissors Game in JavaScript (Console-based)
+   - Implements logic to get human and computer choices.
+   - Plays a single round, updates scores, and logs the winner.
+   - Includes a 5-round game mode that tracks scores and declares a winner.
+
+   Author: [Gutu Fetene Balcha]
+   Date: [28/11/2024]
+*/
+
 
 // Global variables to keep track of players score.
 let humanScore = 0;
 let computerScore = 0;
 
-/* A function that will randomly return one of the following string values: 
-“rock”, “paper” or “scissors”.
- */
+// This function randomly returns string values.
 function getComputerChoice() {
     const randomValue = Math.floor(Math.random() * 3);
 
@@ -22,7 +26,7 @@ function getComputerChoice() {
     }
 }
 
-// A function that takes the user choice and returns it.
+//This function returns user choice.
 function getHumanChoice() {
     let userChoice = prompt("Enter your choice: rock, paper, or scissors").toLowerCase();
 
@@ -33,8 +37,7 @@ function getHumanChoice() {
     return userChoice;
 }
 
-/* A function that takes the human and computer player choices as arguments, 
-plays a single round, increments the round winner’s score and logs a winner announcement. */
+//This function plays a round, updates scores, and logs the winner.
 function playRound() {
     const computerSelection = getComputerChoice();
     const humanSelection = getHumanChoice();
@@ -55,12 +58,12 @@ function playRound() {
     console.log(`Score: Human - ${humanScore}, Computer - ${computerScore}`);
 }
 
-// A function that calls playRound 
+
 function playGame() {
     playRound();
 }
 
-// A function to play 5 rounds, keeps track of the scores and declares a winner at the end.
+// A function plays rounds, updates scores, and declares a winner at the end.
 function PlayFiveRounds() {
     for (let i = 0; i < 5; i++) {
         playGame();
