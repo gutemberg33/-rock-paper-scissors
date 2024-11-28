@@ -63,7 +63,7 @@ function playGame() {
     playRound();
 }
 
-// A function plays rounds, updates scores, and declares a winner at the end.
+// This function plays rounds, updates scores, and declares a winner at the end.
 function PlayFiveRounds() {
     for (let i = 0; i < 5; i++) {
         playGame();
