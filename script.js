@@ -13,17 +13,10 @@
 let humanScore = 0;
 let computerScore = 0;
 
-// This function randomly returns string values.
+// This function randomly returns array values.
 function getComputerChoice() {
-    const randomValue = Math.floor(Math.random() * 3);
-
-    if (randomValue === 0) {
-        return 'rock';
-    } else if (randomValue === 1) {
-        return 'paper';
-    } else {
-        return 'scissors';
-    }
+    const choises = ['rock', 'paper', 'scissors'];
+    return choises[Math.floor(Math.random() * 3)];
 }
 
 //This function plays a round, updates scores, and logs the winner.
